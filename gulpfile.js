@@ -17,7 +17,8 @@ function style() {
     .pipe(plugins.postcss([autoprefixer(), cssnano()]))
     .pipe(plugins.concat("style.css"))
     .pipe(plugins.sourcemaps.write("."))
-    .pipe(dest("./dist/css/"));
+    .pipe(dest("./dist/css/"))
+    .pipe(browserSync.stream());   /*Streams are supported in Browsersync, so you can call reload at specific points during your tasks and all browsers will be informed of the changes. Because Browsersync only cares about your CSS when it's finished compiling - make sure you call .stream() after gulp.dest */
 }
 
 function script() {
