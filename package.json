@@ -4,7 +4,9 @@
   "description": "gulp demo project",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp watch"
+    "start": "gulp start",
+    "clean": "gulp clean"
+    
   },
   "author": "",
   "license": "ISC",
